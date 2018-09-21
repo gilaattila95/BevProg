@@ -21,7 +21,10 @@ int main()
 	cin>> age;
 	if (age <= 0 || age >= 110) simple_error("You're kidding!");
 	
-// A levél kiírása a megadott paraméterek szerint.
+	
+	// A levél kiírása a megadott paraméterek szerint.
+
+
 	cout <<"\n\nDear "<<first_name<<",\n\n";
 	cout <<"How are you? I'm really good, i have bought that camera which i showed to you last month.\n";
 	cout <<"Have you seen "<<friend_name<<" lately?\n";
@@ -33,6 +36,7 @@ int main()
 	{
 		cout <<"If you see "<<friend_name<< " please ask her to call me.\n";
 	}
+	cout <<"I hear you just had a birthday and you are "<<age<<" years old.\n";
 	if (age < 12)
 	{
 		cout <<"Next year you will be "<<++age<<".\n\n";
