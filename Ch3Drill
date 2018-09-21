@@ -1,0 +1,50 @@
+#include "std_lib_facilities.h"
+
+int main()
+{	
+	// Információ gyűjtés: Címzett neve, egy másik barát neve, az ő neme, és a cimzett életkora.
+
+	cout <<"Enter the name of person you want to write to:\n";
+	string  first_name;
+	cin >> first_name;
+
+	string friend_name;
+	cout <<"Tell me the name of another friend of yours:\n";
+	cin >> friend_name;
+
+	char friend_sex;
+	cout<<"Tell me "<<friend_name<<"'s sex. Write 'm' if male and 'f' if female.\n";
+	cin>> friend_sex;
+	
+	int age;
+	cout<<"Enter the age of the recipient:\n";
+	cin>> age;
+	if (age <= 0 || age >= 110) simple_error("You're kidding!");
+	
+// A levél kiírása a megadott paraméterek szerint.
+	cout <<"\n\nDear "<<first_name<<",\n\n";
+	cout <<"How are you? I'm really good, i have bought that camera which i showed to you last month.\n";
+	cout <<"Have you seen "<<friend_name<<" lately?\n";
+	if (friend_sex == 'm')
+	{
+		cout <<"If you see "<<friend_name<<" please ask him to call me.\n";
+	}
+	else if (friend_sex == 'f')
+	{
+		cout <<"If you see "<<friend_name<< " please ask her to call me.\n";
+	}
+	if (age < 12)
+	{
+		cout <<"Next year you will be "<<++age<<".\n\n";
+	}
+	if (age == 17)
+	{		
+		cout <<"Next year you will be able to vote.\n\n";
+	}
+	if (age >= 70)
+	{
+		cout <<"I hope you are enjoying retirement.\n\n";
+	}
+	cout<<"Your Sincerely,\n\n\n Attila Gila.\n";
+
+}
