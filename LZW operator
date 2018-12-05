@@ -111,7 +111,7 @@ public:
  
 
 
-    void operator<< (char b)
+    void beir<< (char b)
     {
         // Mit kell betenni éppen, '0'-t?
         if (b == '0')
@@ -158,10 +158,10 @@ public:
 public :
 	void ki(){
 	
-	std::cout << "numbe of 0 = " << nulla << std::endl;    
-    	std::cout << "numbe of new 0 = " << newnulla << std::endl;
-   	std::cout << "numbe of 1 = " << egyes << std::endl;
-	std::cout << "numbe of new 1 = " << newegyes << std::endl;
+	std::cout << "number of 0 = " << nulla << std::endl;    
+    	std::cout << "number of new 0 = " << newnulla << std::endl;
+   	std::cout << "number of 1 = " << egyes << std::endl;
+	std::cout << "number of new 1 = " << newegyes << std::endl;
 		
 		  }
 
@@ -211,9 +211,9 @@ public :
       std::ostream stream osztály forrásába kellene beleírni ezt a tagfüggvényt,
       amely ismeri a mi LZW binfánkat...
       
-      - globális függvényként: operator<<(kiFile, binFa) és pont ez látszik a következő sorban:
+      - globális függvényként: beir<<(kiFile, binFa) és pont ez látszik a következő sorban:
      */
-    friend std::ostream & operator<< (std::ostream & os, LZWBinFa & bf)
+    friend std::ostream & beir<< (std::ostream & os, LZWBinFa & bf)
     {
         bf.kiir (os);
         return os;
@@ -298,7 +298,7 @@ private:
     double szorasosszeg;
     // szokásosan: nocopyable
     LZWBinFa (const LZWBinFa &);
-    LZWBinFa & operator= (const LZWBinFa &);
+    LZWBinFa & beir= (const LZWBinFa &);
 
     /* Kiírja a csomópontot az os csatornára. A rekurzió kapcsán lásd a korábbi K&R-es utalást... */
     void kiir (Csomopont * elem, std::ostream & os)
@@ -571,10 +571,10 @@ main (int argc, char *argv[])
             // csupa 0 lesz benne a végén pedig a vizsgált 0 vagy 1, az if megmondja melyik:
             if (b & 0x80)
                 // ha a vizsgált bit 1, akkor az '1' betűt nyomjuk az LZW fa objektumunkba
-                binFa << '1';
+                binFa.beir ('1');
             else
                 // különben meg a '0' betűt:
-                binFa << '0';
+                binFa.beir ('0');
             b <<= 1;
         }
 
