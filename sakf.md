@@ -21,8 +21,6 @@
 
 **:briefcase:Megbízó:** *SZFM Ügyvédi és Könyvelő iroda*
 
-**:bulb:Alapötlet:** 
-
 ## KövetelménySpecifikáció
 
 ### :on: Jelenlegi Helyzet Leírása
